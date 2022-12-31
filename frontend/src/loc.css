@@ -1,0 +1,174 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.frist{
+    height: 500px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.table {
+  width: 267px;
+  height: 170px;
+  background-color: #d3249e;
+  border-radius: 10px;
+}
+.table .monitor-wrapper {
+  background: #050321;
+  width: 238px;
+  height: 130px;
+  box-shadow: 0px 2px 2px 2px rgb(0 0 0 / 30%);
+}
+.table .monitor-wrapper .monitor {
+  width: 219px;
+  height: 113px;
+  background-color: #344151;
+  overflow: hidden;
+  white-space: nowrap;
+  box-shadow: inset 0px 5px 10px 2px rgb(0 0 0 / 30%)
+}
+.table .monitor-wrapper .monitor p {
+  font-family: 'VT323', monospace;
+    font-size: 35px;
+    position: relative;
+    display: inline-block;
+    animation: move 50s infinite linear;
+    color: #EBB55F;
+}
+
+@keyframes move {
+  from { left: 800px; }
+  to { left: -4800px; }
+}
+.form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+  
+button {
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+   }
+   
+   button::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+   }
+   
+   button:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+   }
+   
+   button:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+           0 0 2.5em 2em var(--glow-spread-color),
+           inset 0 0 .5em .25em var(--glow-color);
+   }
+
+
+.card {
+    width: auto;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(7px);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 26px;
+    box-shadow: 35px 35px 68px 0px rgba(157, 177, 255, 0.2), inset -8px -8px 16px 0px rgba(157, 177, 255, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255);
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    box-shadow: 35px 35px 68px 0px rgba(0, 0, 0, 0.5);
+  }
+  
+  .card:active {
+    transform: scale(0.95);
+    border: 1px solid rgb(16, 240, 64);
+    animation: 0.3s click cubic-bezier(.42,0,.58,1);
+  }
+  
+  @keyframes click{
+    from{
+      transform: scale(1);
+    }
+    50%{
+      transform: scale(0.95);
+    }
+    to{
+      transform: scale(1);
+    }
+  }
+ 
+  .input {
+    max-width: 190px;
+    height: 30px;
+    margin: 20px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    outline: none;
+    border-bottom: 2px solid #3f3f3f;
+    caret-color: #3f3f3f;
+    background-color: #212121;
+    padding: 10px;
+    transition: .5s linear;
+    font-family: monospace;
+    letter-spacing: 1px;
+  }
+  
+  .input:focus {
+    border: 2px solid #fa4753;
+    caret-color: #fa4753;
+    color: #fa4753;
+    box-shadow: 4px 4px 10px #070707;
+  }
+  
+  .input:focus::placeholder {
+    color: #fa4753;
+  }
