@@ -10,6 +10,9 @@ var cors = require('cors');
 app.use(express.json());
 app.use(cors());
 app.set('Content-Security-Policy', "default-src 'none'; style-src 'unsafe-inline'");
+app.use(cors({
+  origin: 'https://new-year-2023-8j4y.onrender.com'
+}));
 
 app.post('/location', (req, res) => {
   const { location, phoneNumber, name, address } = req.body;
