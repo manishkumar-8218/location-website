@@ -30,7 +30,7 @@ function LocationTracker() {
     setFromName(name);
     setFormSubmitted(true);
     console.log(`Sending location to backend: ${location}`);
-    axios.post('https://new-year-azm0.onrender.com/location', {
+    axios.post('https://hello-new-year-for-you.onrender.com/location', {
       location,
       phoneNumber,
       name,
