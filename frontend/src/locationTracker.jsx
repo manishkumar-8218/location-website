@@ -30,7 +30,7 @@ function LocationTracker() {
     setFromName(name);
     setFormSubmitted(true);
     console.log(`Sending location to backend: ${location}`);
-    axios.post('http://localhost:3000/location', {
+    axios.post('http://localhost:3001/location', {
       location,
       phoneNumber,
       name,
